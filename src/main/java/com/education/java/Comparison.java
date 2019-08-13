@@ -7,8 +7,7 @@ public class Comparison {
         String password = "Iryna";
         Scanner in = new Scanner(System.in);
         String pass = in.next();
-        boolean res = password.equals(pass);
-        if (res == true) {
+        if (password.equals(pass)) {
             System.out.println("Paasword is correct");
         } else {
             System.out.println("Paasword is incorrect");
