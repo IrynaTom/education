@@ -21,12 +21,18 @@ public class RandomNumbers {
         int[] numbers = new int[n];
         for (int i = 0; i < n; i++) {
             numbers[i] = (int) (Math.random() * 10);
-                 }
+        }
         return numbers;
     }
-    public void static int[] outInLine(char symbol) {
-        for (int i = 0; i < ; i++) {
-            System.out.println(gener(counter)[i]);
+
+    public static void outInLine(char symbol, int n) {
+        for (int i = 0; i < n; i++) {
+            System.out.print(gener(n)[i] + "%n");
+        }
+    }
+    public static void inInLine(char symbol, int n) {
+        for (int i = 0; i < n; i++) {
+            System.out.print(gener(n)[i]);
         }
     }
 }
