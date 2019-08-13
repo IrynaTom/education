@@ -9,11 +9,11 @@ public class RandomNumbers {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter number, please:");
         int counter = in.nextInt();
-        System.out.println("With the transition to a new line:");
+        int[] inLine = new int[counter];
+        int[] values = gener(counter);
 
-        for (int i = 0; i < counter; i++) {
-            System.out.println(gener(counter)[i]);
-        }
+        printValues(gener(counter), ' ');
+        printValues(gener(counter), '\n');
 
     }
 
@@ -25,14 +25,10 @@ public class RandomNumbers {
         return numbers;
     }
 
-    public static void outInLine(char symbol, int n) {
-        for (int i = 0; i < n; i++) {
-            System.out.print(gener(n)[i] + "%n");
+    public static void printValues(int[] values, char separator){
+        for (int i = 0; i < values.length; i++) {
+            System.out.print(gener(values.length)[i] + separator);
         }
     }
-    public static void inInLine(char symbol, int n) {
-        for (int i = 0; i < n; i++) {
-            System.out.print(gener(n)[i]);
-        }
-    }
+
 }
