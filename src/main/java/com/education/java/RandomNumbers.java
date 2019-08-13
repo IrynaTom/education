@@ -12,8 +12,8 @@ public class RandomNumbers {
         int[] inLine = new int[counter];
         int[] values = gener(counter);
 
-        printValues(gener(counter), ' ');
-        printValues(gener(counter), '\n');
+        printValues(values, ' ');
+       // printValues(gener(counter), '\n');
 
     }
 
