@@ -11,11 +11,22 @@ public class RandomNumbers {
         int counter = in.nextInt();
         System.out.println("With the transition to a new line:");
 
-    for (int i= 0; i< counter; i++) {
-        int number = (int) (Math.random() * 10);
-               System.out.println(number);
-        System.out.print(number);
+        for (int i = 0; i < counter; i++) {
+            System.out.println(gener(counter)[i]);
+        }
 
-    }}
+    }
 
+    public static int[] gener(int n) {
+        int[] numbers = new int[n];
+        for (int i = 0; i < n; i++) {
+            numbers[i] = (int) (Math.random() * 10);
+                 }
+        return numbers;
+    }
+    public void static int[] outInLine(char symbol) {
+        for (int i = 0; i < ; i++) {
+            System.out.println(gener(counter)[i]);
+        }
+    }
 }

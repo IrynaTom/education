@@ -32,7 +32,7 @@ public class WorkWithNumber {
             if (i % 2 == 0) {
                 even.add(i);
             }
-            System.out.println(even[i]);
+           // System.out.println(even[i]);
         }
         return even;
     }
