@@ -11,8 +11,12 @@ public class RandomNumbers {
         int counter = in.nextInt();
         int[] inLine = new int[counter];
         int[] values = gener(counter);
+       // for (int i = 0; i < values.length; i++) {
+        //    System.out.println(values[i]);
+      //  }
 
-        printValues(values, ' ');
+
+        printValues(gener(counter), ' ');
        // printValues(gener(counter), '\n');
 
     }
@@ -27,7 +31,7 @@ public class RandomNumbers {
 
     public static void printValues(int[] values, char separator){
         for (int i = 0; i < values.length; i++) {
-            System.out.print(gener(values.length)[i] + separator);
+            System.out.print(values[i] + separator);
         }
     }
 
