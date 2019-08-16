@@ -29,6 +29,7 @@ public class WorkWithNumber {
         System.out.println("halfSum numbers:" + halfSum(numbers));
         System.out.println("Lucky numbers:" + luckyNum(numbers));
         System.out.println("Lucky2 numbers:" + luckyNum2(numbers));
+        System.out.println("threeDigitNumbers:" + threeDigitNumbers(numbers));
 
     }
 
@@ -115,8 +116,8 @@ public class WorkWithNumber {
     public static ArrayList<Integer> luckyNum(int[] numbers) {
         ArrayList<Integer> array = new ArrayList<Integer>();
         for (int i = 0; i < numbers.length; i++) {
-           if(luckyNumber.contains(numbers[i])){
-               array.add(numbers[i]);
+            if (luckyNumber.contains(numbers[i])) {
+                array.add(numbers[i]);
             }
         }
         return array;
@@ -126,12 +127,32 @@ public class WorkWithNumber {
     public static ArrayList<Integer> luckyNum2(int[] numbers) {
         ArrayList<Integer> array = new ArrayList<Integer>();
         for (int i = 0; i < numbers.length; i++) {
-          for(int j=0;j<luckyNumber.size(); j++){
-              if(numbers[i]==luckyNumber.get(j)){
-                  array.add(numbers[i]);
-              }
-          }
+            for (int j = 0; j < luckyNumber.size(); j++) {
+                if (numbers[i] == luckyNumber.get(j)) {
+                    array.add(numbers[i]);
+                }
             }
+        }
         return array;
     }
+
+    public static ArrayList<Integer> threeDigitNumbers(int[] numbers) {
+        ArrayList<Integer> array = new ArrayList<Integer>();
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] >= 100 && numbers[i] < 1000) {
+                int first = numbers[i] / 100;
+                int second = (numbers[i] % 100) / 10;
+                int third = (numbers[i] % 10);
+                if(!isMatch(first,second,third)){
+                    array.add(numbers[i]);
+                }
+            }
+        }
+        return array;
+    }
+
+    public static boolean isMatch(int hundreds, int tens, int ones) {
+        return hundreds == tens || tens == ones || hundreds == ones;
+    }
+
 }
